@@ -1,7 +1,7 @@
 /*
-#	Initiation à JSP
+#	Initiation Ã  JSP
 #	A. Tasso, S. Ermacore
-#	Exercices Chapitre 7 : Les servlets ou les dessous cachés de JSP
+#	Exercices Chapitre 7 : Les servlets ou les dessous cachÃ©s de JSP
 #	Fichier : PreferencesParDefaut.java
 #	Class : PreferencesParDefaut
 */
@@ -12,14 +12,14 @@ import javax.servlet.http.*;
 import java.sql.*;
 
 public class PreferencesParDefaut extends HttpServlet {
-  //Déclarationn des variables d'instance
+  //DÃ©clarationn des variables d'instance
   String fichier; 
   String categorie, couleurFond, couleurTxt;
   String categorieParDefaut, couleurFondParDefaut, couleurTxtParDefaut;
   String [] tableCouleur = {"black", "white", "red", "yellow", "green"};
   String [] tableCategorie = {"Policier", "Roman", "Junior", "Philosophie", "Science-fiction"};
 
-  // Créer la liste de choix avec un élément de la liste préselectionné
+  // CrÃ©er la liste de choix avec un Ã©lÃ©ment de la liste prÃ©selectionnÃ©
   private String fSelect(String [] tab, String nom, String motSelectionne) {
     String chaine ="<select name="+nom+">";
     String OK="";
@@ -34,7 +34,7 @@ public class PreferencesParDefaut extends HttpServlet {
     return chaine;
   }
 
-  // Enregistrer les nouvelles préférences dans le fichier Ressource.txt
+  // Enregistrer les nouvelles prÃ©fÃ©rences dans le fichier Ressource.txt
   private void sauvegarder() {
     try    {
        BufferedWriter bw = new BufferedWriter(new FileWriter(fichier));   
@@ -50,11 +50,11 @@ public class PreferencesParDefaut extends HttpServlet {
     } 
   }
 
-  // Afficher la liste des livres en fonction de la requête passée en paramètre
+  // Afficher la liste des livres en fonction de la requÃªte passÃ©e en paramÃ¨tre
   private String afficheListeLivres(ResultSet rs, String police) {
     String chaine="";
     if (rs == null) {
-      chaine="<font color=red>Pas de résultat : "+rs+"</font>";
+      chaine="<font color=red>Pas de rï¿½sultat : "+rs+"</font>";
     } else {
       try {
         chaine="<table width=700 border=1>";
@@ -84,30 +84,30 @@ public class PreferencesParDefaut extends HttpServlet {
    return chaine;
   } 
 
-  // init() est appelée avant le traitement des requêtes 
+  // init() est appelÃ©e avant le traitement des requÃªtes 
   public void init(ServletConfig config) throws ServletException  {
     super.init(config);
     try    {
-      // Recherche le parametre nomFichier défini dans /WEB-INF/web.xml
+      // Recherche le parametre nomFichier dÃ©fini dans /WEB-INF/web.xml
       fichier = config.getInitParameter("nomFichier"); 
       String mot="";
       int i = 1;
-      // Si le fichier contenant les parametres a été trouvé  
+      // Si le fichier contenant les parametres a Ã©tÃ© trouvÃ©  
       if (fichier != null) {  
          // Lire  le fichier d'initialisation  ligne par ligne  
         BufferedReader br = new BufferedReader(new FileReader(fichier));         
         while ((mot = br.readLine()) != null) {   
           System.out.println("mot : "+mot);          
           switch(i) {
-             // La première ligne définie la catégorie par défaut
+             // La premiÃ¨re ligne dÃ©finie la catÃ©gorie par dÃ©faut
             case 1 : 
               categorieParDefaut = mot;
             break;
-            // La deuxième ligne définie la couleur de fond par défaut
+            // La deuxiÃ¨me ligne dÃ©finie la couleur de fond par dÃ©faut
             case 2 : 
               couleurFondParDefaut =  mot;
             break;
-            // La troisième ligne définie la couleur du texte par défaut
+            // La troisiÃ¨me ligne dÃ©finie la couleur du texte par dÃ©faut
            case 3 : 
              couleurTxtParDefaut =  mot;
            break;
@@ -122,16 +122,16 @@ public class PreferencesParDefaut extends HttpServlet {
     }    
   }
 
-  // destroy() est appelée lorsque le serveur est arrêté proprement (shutdown)
+  // destroy() est appelÃ©e lorsque le serveur est arrÃªtÃ© proprement (shutdown)
   public void destroy () {
     // Enregistrer les informations avant la destruction de la servlet
     sauvegarder();
     super.destroy();
 }
 
-  // doGet() est appelée lorsque la requête est passée en mode GET
+  // doGet() est appelÃ©e lorsque la requÃªte est passÃ©e en mode GET
   public void doGet( HttpServletRequest req, HttpServletResponse rep)throws IOException, ServletException {
-   // Affiche le formulaire de saisie des préférence en fonction des données lues dans le fichier Ressources.txt  
+   // Affiche le formulaire de saisie des prÃ©fÃ©rence en fonction des donnÃ©es lues dans le fichier Ressources.txt  
    rep.setContentType("text/html");
    PrintWriter pw = rep.getWriter();
    pw.println("<html>");
@@ -140,12 +140,12 @@ public class PreferencesParDefaut extends HttpServlet {
    pw.println("</head>");
    pw.println("<body>");
    pw.println("<table width=700><tr><td>");
-   pw.println("<h1><font face=arial color="+couleurTxt+">Préférences par défaut</h1>");
-   // Action : appeler la même servlet en passant les paramètres en POST
+   pw.println("<h1><font face=arial color="+couleurTxt+">PrÃ©fÃ©rences par dÃ©faut</h1>");
+   // Action : appeler la mï¿½me servlet en passant les paramï¿½tres en POST
    pw.println("<form name=ident action=http://localhost:8080/exercicesJSP/servlet/PreferencesParDefaut method=POST>");
 
-   // Saisie des préférences par défaut -->
-   pw.println("<h3><font face=arial>Catégorie préférée : </h3>");
+   // Saisie des prï¿½fï¿½rences par dï¿½faut -->
+   pw.println("<h3><font face=arial>CatÃ©gorie prÃ©fÃ©rÃ©e : </h3>");
    pw.println("<table>");
    pw.println("<tr><td>");
    pw.println(fSelect(tableCategorie,"categorie", categorieParDefaut));
@@ -163,7 +163,7 @@ public class PreferencesParDefaut extends HttpServlet {
    pw.println("  </td>");
    pw.println("</tr>");
    pw.println("</table><BR>");
-   pw.println("<input type=submit value=Vérifier>");
+   pw.println("<input type=submit value=VÃ©rifier>");
    pw.println("</form>");
    pw.println("</td></tr></table>");
    pw.println("</body>");
@@ -171,9 +171,9 @@ public class PreferencesParDefaut extends HttpServlet {
   }  
  
 
-  // doPost() est appelée lorsque la requête est passée en mode POST
+  // doPost() est appelÃ©e lorsque la requÃªte est passÃ©e en mode POST
   public void doPost( HttpServletRequest req, HttpServletResponse rep)throws IOException, ServletException {
-    // Se connecter à la base de données
+    // Se connecter Ã  la base de donnÃ©es
     DBConnexion dbcnx = new DBConnexion();
     dbcnx.setLogin("jspuser");
     dbcnx.setPassword("jspuser");
@@ -203,14 +203,14 @@ public class PreferencesParDefaut extends HttpServlet {
       couleurTxt = req.getParameter("couleurTxt");
     } 
 
-    //<!--// Afficher la page en fonction des préférences -->
+    //<!--// Afficher la page en fonction des prÃ©fÃ©rences -->
     pw.println("<html>");
     pw.println("<body bgcolor="+couleurFond+">");
     pw.println("<table width=700><tr><td>");
     pw.println("<h1><font face=arial color="+couleurTxt+">Bonjour, </h1>");
-    pw.println("<h3><font face=arial color="+couleurTxt+">Les livres correspondant à votre catégorie préférée : "+categorie+" </h3>");
+    pw.println("<h3><font face=arial color="+couleurTxt+">Les livres correspondant Ã  votre catÃ©gorie prÃ©fÃ©rÃ©e : "+categorie+" </h3>");
 
-    // Construction de la requete pour la catégorie préférée
+    // Construction de la requÃªte pour la catÃ©gorie prÃ©fÃ©rÃ©e
     String livresPerso="select * from livres where LIV_Categorie='" + categorie+ "'";
     String chaineResultat;
     ResultSet rs;
@@ -223,7 +223,7 @@ public class PreferencesParDefaut extends HttpServlet {
     }
     pw.println("<h3><font face=arial color="+couleurTxt+">Les autres livres</h3>");
 
-    // Construction de la requete pour les autres livres
+    // Construction de la requÃªte pour les autres livres
     String livres="select * from livres where LIV_Categorie<>'" + categorie +"'";
     try     {
       rs = lien.executeQuery(livres);

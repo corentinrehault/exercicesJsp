@@ -1,8 +1,8 @@
 /*
-#	Initiation ‡ JSP
+#	Initiation √† JSP
 #	A. Tasso, S. Ermacore
-#	Exercices Chapitre 5 : Interroger une base de donnÈes
-#	Exercice 5.2.b  Composant utilisÈ par le script valideLecteur.jsp
+#	Exercices Chapitre 5 : Interroger une base de donn√©es
+#	Exercice 5.2.b  Composant utilis√© par le script valideLecteur.jsp
 #	Fichier : Lecteur.java
 #	Class : Lecteur
 #	Package : Exercices.Ch5
@@ -15,7 +15,7 @@ import java.util.Date;
 import java.text.DateFormat ;
 public class Lecteur implements java.io.Serializable {
 
-	//DÈfinition des propriÈtÈs
+	//D√©finition des propri√©t√©s
 	private String nomLecteur ;
 	private String prenomLecteur ;
 	private String adresse ;
@@ -25,12 +25,12 @@ public class Lecteur implements java.io.Serializable {
 	private String dateAnniversaire ;
 	private String motDePasse ;
 
-	// DÈfinition des methodes díaccËs en Ècriture
+	// D√©finition des m√©thodes d'acc√®s en √©criture
 	// Le nom du lecteur
 	public void setNomLecteur (String valeur) {
 		nomLecteur =valeur;
 	}
-	// Le prÈnom du lecteur
+	// Le pr√©nom du lecteur
 	public void setPrenomLecteur (String valeur) {
 		prenomLecteur =valeur;
 	}
@@ -50,16 +50,16 @@ public class Lecteur implements java.io.Serializable {
 	public void setMotDePasse (String valeur) {
 		motDePasse =valeur;
 	}		
-	// DÈfinition des methodes díaccËs en lecture
+	// D√©finition des m√©thodes d'acc√®s en lecture
 	// Le nom du lecteur
 	public String getNomLecteur () {
 		return nomLecteur;
 	}
-	// Le prÈnom du lecteur 
+	// Le pr√©nom du lecteur 
 	public String getPrenomLecteur () {
 		return prenomLecteur;
 	}
-	// Le numero du lecteur 
+	// Le num√©ro du lecteur 
 	public String getNumero () {
 		return calculNumLecteur();
 	}
@@ -97,10 +97,10 @@ public class Lecteur implements java.io.Serializable {
 
 	}
 	
-	// Calculer le numero unique du lecteur
-	// Le numero unique du lecteur est formÈ par la combinaison
-	// des deux premieres lettre de son prÈnoms suivies
-	// par le nombre de miliseconde ÈcoulÈes depuis le 01/01/1970 au moment de l'instanciation
+	// Calculer le num√©ro unique du lecteur
+	// Le num√©ro unique du lecteur est form√© par la combinaison
+	// des deux premi√®res lettre de son pr√©noms suivies
+	// par le nombre de miliseconde √©coul√©es depuis le 01/01/1970 au moment de l'instanciation
 	// du javaBean
 	private String calculNumLecteur () {
     String numLecteur;

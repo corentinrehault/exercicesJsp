@@ -1,7 +1,7 @@
 /*
-#	Initiation ‡ JSP
+#	Initiation √† JSP
 #	A. Tasso, S. Ermacore
-#	Exercices Chapitre 5 : Interroger une base de donnÈes
+#	Exercices Chapitre 5 : Interroger une base de donn√©es
 #	Exercices 5.5.b
 #	Fichier : Emprunt.java
 #	Class : Emprunt
@@ -15,14 +15,14 @@ import java.util.Date;
 import java.text.DateFormat ;
 public class Emprunt implements java.io.Serializable {
 
-	//DÈfinition des propriÈtÈs
+	//D√©finition des propri√©t√©s
 	private String numeroEmprunt ;
 	private String dateEmprunt ;
 	private String dateRetourEmprunt ;
 	private String codeLivre ;
 	private String numeroLecteur ;
 	
-	// DÈfinition des methodes díaccËs en Ècriture
+	// D√©finition des m√©thodes d'acc√®s en √©criture
 	// La date de l'emprunt
 	public void setDateEmprunt (Calendar date) {
 		dateEmprunt = formatDate(date);
@@ -37,7 +37,7 @@ public class Emprunt implements java.io.Serializable {
 	}
 
 		
-	// DÈfinition des methodes díaccËs en lecture
+	// D√©finition des m√©thodes d'acc√®s en lecture
 	// La date de l'emprunt
 	public String getDateEmprunt () {
 		return dateEmprunt;
@@ -78,10 +78,10 @@ public class Emprunt implements java.io.Serializable {
                 return sDate;
         }
 	
-	// Calculer le numero unique de l'emprunt
-	// Le numero unique de l'emprunt est formÈ par la combinaison
-	// des deux premieres lettres du letters, du code du livre et
-	// par le nombre de miliseconde ÈcoulÈes depuis le 01/01/1970 au moment de l'instanciation
+	// Calculer le num√©ro unique de l'emprunt
+	// Le num√©ro unique de l'emprunt est form√© par la combinaison
+	// des deux premi√®res lettres du letters, du code du livre et
+	// par le nombre de miliseconde √©coul√©es depuis le 01/01/1970 au moment de l'instanciation
 	// du javaBean
 	private String quelNumEmprunt () {
     String numEmprunt;

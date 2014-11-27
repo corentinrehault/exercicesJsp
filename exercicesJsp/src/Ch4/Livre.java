@@ -1,8 +1,8 @@
 /*
-#	Initiation à JSP
+#	Initiation Ã  JSP
 #	A. Tasso, S. Ermacore
 #	Exemples Chapitre 4 : Utiliser un objet Java dans un script
-#	Exercice 4.1 Composant utilisé par le script valideLivre.jsp 
+#	Exercice 4.1 Composant utilisÃ© par le script valideLivre.jsp 
 #	Fichier : Livre.java
 #	Class : Livre
 #	Package : Exercices.Ch4
@@ -12,7 +12,7 @@ package Exercices.Ch4 ;
 import java.io.Serializable ;
 public class Livre implements java.io.Serializable {
 
-	//4.1.a Définition des propriétés
+	//4.1.a DÃ©finition des propriÃ©tÃ©s
 	private String titre;
 	private String categorie ;
 	private String isbn ;
@@ -20,16 +20,16 @@ public class Livre implements java.io.Serializable {
 	private String prenomAuteur ;
 	private String code ;
 
-	// 4.1.b Définition des methodes d’accès en écriture
+	// 4.1.b DÃ©finition des methodes d'accÃ¨s en Ã©criture
 	// Le Titre
 	public void setTitre (String valeur) {
 		titre = valeur ;
 	}
-	// La catégorie
+	// La catÃ©gorie
 	public void setCategorie (String valeur) {
 		categorie = valeur;
 	}
-	// Le numéro ISBN
+	// Le numÃ©ro ISBN
 	public void setIsbn (String valeur) {
 		isbn =valeur;
 	}
@@ -37,21 +37,21 @@ public class Livre implements java.io.Serializable {
 	public void setNomAuteur (String valeur) {
 		nomAuteur =valeur;
 	}
-	// Le prénom de l'auteur 
+	// Le prÃ©nom de l'auteur 
 	public void setPrenomAuteur (String valeur) {
 		prenomAuteur =valeur;
 	}
 	
-	// 4.1.c Définition des methodes d’accès en lecture
+	// 4.1.c DÃ©finition des methodes d'accÃ¨s en lecture
 	//Le titre
 	public String getTitre () {
 		return titre;
 	}
-	// La catégorie
+	// La catÃ©gorie
 	public String getCategorie () {
 		return categorie;
 	}
-	// Le numéro ISBN
+	// Le numÃ©ro ISBN
 	public String getIsbn () {
 		return isbn;
 	}
@@ -59,7 +59,7 @@ public class Livre implements java.io.Serializable {
 	public String getNomAuteur () {
 		return nomAuteur;
 	}
-	// Le prénom de l'auteur 
+	// Le prÃ©nom de l'auteur 
 	public String getPrenomAuteur () {
 		return prenomAuteur;
 	}

@@ -1,7 +1,7 @@
 /*
-#	Initiation ‡ JSP
+#	Initiation √† JSP
 #	A. Tasso, S. Ermacore
-#	Exercices Chapitre 5 : Interroger une base de donnÈes
+#	Exercices Chapitre 5 : Interroger une base de donn√©es
 #	 
 #	Fichier : DBConnexion.java
 #	Class : DBConnexion
@@ -14,7 +14,7 @@ import java.sql.*;
  
 public class DBConnexion implements java.io.Serializable {
 	
-	//DÈfinition des propriÈtÈs
+	//D√©finition des propri√©t√©s
 	private String login;
 	private String password ;
 	private String hostname;
@@ -22,7 +22,7 @@ public class DBConnexion implements java.io.Serializable {
 	private String nomDeLaBase;
 	private Connection cnx;
 	
-	// Methodes d'acces en Ècriture
+	// M√©thodes d'acc√®s en √©criture
 	public void setLogin (String valeur) {
 		login = valeur ;
 	}
@@ -43,7 +43,7 @@ public class DBConnexion implements java.io.Serializable {
 		nomDeLaBase = valeur ;
 	}	
 	
-	// Methodes d'acces en lecture
+	// M√©thodes d'acc√®s en lecture
 	public Connection getCnx() {
 		if (etablirConnexion()) {
 			return cnx;	
@@ -52,7 +52,7 @@ public class DBConnexion implements java.io.Serializable {
 		}
 	}	
 	
-	// MÈthodes invisibles (mÈtier)
+	// M√©thodes invisibles (m√©tier)
 	private String construireUrlJdbc() {
 		String urlJdbc ;
 		urlJdbc = "jdbc:mysql://"+hostname+":" + port + "/" + nomDeLaBase ;

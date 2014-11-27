@@ -1,7 +1,7 @@
 /*
-#	Initiation ‡ JSP
+#	Initiation √† JSP
 #	A. Tasso, S. Ermacore
-#	Exercices Chapitre 5 : Interroger une base de donnÈes
+#	Exercices Chapitre 5 : Interroger une base de donn√©es
 #	
 #	Fichier : DBLien.java
 #	Class : DBLien
@@ -15,10 +15,10 @@ import java.sql.*;
 
 public class DBLien implements java.io.Serializable {
 	
-	//DÈfinition des propriÈtÈs
+	//D√©finition des propri√©t√©s
 	private Statement lien = null;
 	
-	// Methodes d'acces en lecture
+	// M√©thodes d'acc√®s en lecture
 	public Statement getLien(Connection cnx) {
 		if (construireStatement(cnx)) {
 			return lien;
@@ -27,7 +27,7 @@ public class DBLien implements java.io.Serializable {
 		}
 	}
 	
-	// Methodes invisibles
+	// M√©thodes invisibles
 	private boolean construireStatement (Connection cnx) {
 		boolean statusStatement = false;
 		try {
