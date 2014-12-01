@@ -7,7 +7,8 @@
 #	Class : Lecteur
 #	Package : Exercices.Ch5
 */
-package Exercices.Ch5 ;
+
+package Ch5 ;
 
 import java.io.Serializable ;
 import java.util.Calendar ;

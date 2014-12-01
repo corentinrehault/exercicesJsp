@@ -8,12 +8,12 @@
 #	Package : Exercices.Ch6
 */
 
-package Exercices.Ch6 ;
+package Ch6 ;
 
 import java.io.Serializable ;
 import java.util.Calendar ;
 import java.text.DateFormat ;
-public class Lecteur implements java.io.Serializable {
+public class Lecteur implements Serializable {
 
 	//Définition des propriétés
 	private String nomLecteur ;

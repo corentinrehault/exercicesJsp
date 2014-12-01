@@ -1,3 +1,5 @@
+package Ch7;
+
 /*
 #	Initiation à JSP
 #	A. Tasso, S. Ermacore
@@ -7,8 +9,13 @@
 */
 import java.io.*;
 import java.util.*;
+
 import javax.servlet.*;
 import javax.servlet.http.*;
+
+import Ch5.DBConnexion;
+import Ch5.DBLien;
+
 import java.sql.*;
 
 public class PreferencesParDefaut extends HttpServlet {

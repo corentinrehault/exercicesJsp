@@ -7,7 +7,7 @@
 #       JavaBeans : Lecteur (exercicesJSP/WEB-INF/classes/exercices/Ch4)
 -->
 
-<jsp:useBean id="lecteur" class="Exercices.Ch4.Lecteur"/>
+<jsp:useBean id="lecteur" class="Ch4.Lecteur"/>
 <!-- On attribue les valeurs passées en POST en initialisant le composant Lecteur -->
 <jsp:setProperty name="lecteur" property="nomLecteur" param="nom"/>
 <jsp:setProperty name="lecteur" property="prenomLecteur" param="prenom"/>

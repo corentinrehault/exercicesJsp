@@ -7,7 +7,7 @@
 #	Class : Livre
 #	Package : Exercices.Ch4
 */
-package Exercices.Ch4 ;
+package Ch4 ;
 
 import java.io.Serializable ;
 public class Livre implements java.io.Serializable {

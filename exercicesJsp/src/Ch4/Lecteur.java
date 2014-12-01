@@ -8,7 +8,7 @@
 #	Package : Exercices.Ch4
 */
 
-package Exercices.Ch4 ;
+package Ch4 ;
 
 import java.io.Serializable ;
 import java.util.Calendar ;
