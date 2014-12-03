@@ -48,7 +48,7 @@ CREATE TABLE `lecteurs` (
 
 # Données enregistrées pour la table `lecteurs` pour les exexercices emples du chapitre 5
 
-INSERT INTO `lecteurs` VALUES ('216', 'Lamy', 'Eléna', '7 rue du Paradis', 'Paris', '75012', 'El�na');
+INSERT INTO `lecteurs` VALUES ('216', 'Lamy', 'Eléna', '7 rue du Paradis', 'Paris', '75012', 'Eléna');
 INSERT INTO `lecteurs` VALUES ('221', 'Théos', 'Pablo', '3 passage Secret', 'Paris', '75004', 'Pablo');
 INSERT INTO `lecteurs` VALUES ('342', 'Camden',	'Nicolas', '24 av du Papillon', 'Paris', '75013', 'Nicolas');
 INSERT INTO `lecteurs` VALUES ('528', 'Line', 'Margo', '22 rue de la Liberté', 'Paris', '75005', 'Margo');
@@ -78,7 +78,7 @@ CREATE TABLE `livres` (
 #
 
     
-INSERT INTO `livres` VALUES ('KaElRo58', 'Kazan', 'Elia', 'L'arrangement', 'Roman', '2234023858', 1);
+INSERT INTO `livres` VALUES ('KaElRo58', 'Kazan', 'Elia', 'L\'arrangement', 'Roman', '2234023858', 1);
 INSERT INTO `livres` VALUES ('GaJoPh68', 'Gaarder', 'Jostein', 'Le monde de Sophie', 'Philosophie', '2020550768', 1);
 INSERT INTO `livres` VALUES ('AsIsSc08', 'Asimov', 'Isaac', 'Fondation', 'Science-fiction', '2070415708', 1);
 INSERT INTO `livres` VALUES ('FaPhSc90', 'Farmer', 'Philip José', 'Le monde du Fleuve', 'Science-fiction', '2253061190', 1);
@@ -86,8 +86,8 @@ INSERT INTO `livres` VALUES ('DiPhSc43', 'Dick', 'Philip K.', 'Blade Runner', 'S
 INSERT INTO `livres` VALUES ('CoAnPh07', 'Comte-Sponville', 'André', 'Traité du désespoir et de la béatitude', 'Philosophie', '2130529607', 1);
 INSERT INTO `livres` VALUES ('WaAlRo37', 'Walker', 'Alice', 'La couleur pourpre', 'Roman', '2290021237', 1);
 INSERT INTO `livres` VALUES ('LeGaPo95', 'Leroux', 'Gaston', 'Le mystère de la chambre jaune', 'Policier', '2253005495', 0);
-INSERT INTO `livres` VALUES ('KeDoPo83', 'Kennedy', 'Douglas', 'L'homme qui voulait vivre sa vie', 'Policier', '2266087983', 0);
+INSERT INTO `livres` VALUES ('KeDoPo83', 'Kennedy', 'Douglas', 'L\'homme qui voulait vivre sa vie', 'Policier', '2266087983', 0);
 INSERT INTO `livres` VALUES ('KuMiRo38', 'Kundera', 'Milan', 'La plaisanterie', 'Roman', '2070703738', 0);
 INSERT INTO `livres` VALUES ('ZwStRo33', 'Zweig', 'Stefan', 'La confusion des sentiments', 'Roman', '2253061433', 0);
 INSERT INTO `livres` VALUES ('BaJaJu63', 'Barrie', 'James M.', 'Peter Pan', 'Junior', '2290333263', 0);
-INSERT INTO `livres` VALUES ('VeJuRo22', 'Verne', 'Jules', 'L'île mystérieuse', 'Roman', '0812966422', 0);
+INSERT INTO `livres` VALUES ('VeJuRo22', 'Verne', 'Jules', 'L\'île mystérieuse', 'Roman', '0812966422', 0);

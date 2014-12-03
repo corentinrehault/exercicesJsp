@@ -9,7 +9,7 @@
 <%@ page import="java.sql.Connection" %>
 <%@ page import="java.sql.Statement" %>
 
-<jsp:useBean id="lecteur" class="Exercices.Ch5.Lecteur"/>
+<jsp:useBean id="lecteur" class="Ch5.Lecteur"/>
 <!-- On attribue les valeurs passées en POST en initialisant le composant Lecteur -->
 <jsp:setProperty name="lecteur" property="nomLecteur" param="nom"/>
 <jsp:setProperty name="lecteur" property="prenomLecteur" param="prenom"/>
@@ -19,17 +19,17 @@
 <jsp:setProperty name="lecteur" property="motDePasse" param="motDePasse"/>
 
 <!--// DBConnexion Bean-->
-<jsp:useBean id="dbcnx" class="Exercices.Ch5.DBConnexion">
+<jsp:useBean id="dbcnx" class="Ch5.DBConnexion">
 <!--// Code d'initialisation //-->
-<jsp:setProperty name= "dbcnx" property="login" value="jspuser"/>
-<jsp:setProperty name= "dbcnx" property="password" value="jspuser"/>
+<jsp:setProperty name= "dbcnx" property="login" value="userjsp"/>
+<jsp:setProperty name= "dbcnx" property="password" value="userjsp"/>
 <jsp:setProperty name= "dbcnx" property="hostname" value="localhost"/>
 <jsp:setProperty name= "dbcnx" property="port" value="3306"/>
 <jsp:setProperty name= "dbcnx" property="nomDeLaBase" value="livrejsp"/>
 </jsp:useBean>
 
 <!--// DBLien Bean -->
-<jsp:useBean id="dblien" class="Exercices.Ch5.DBLien"/>
+<jsp:useBean id="dblien" class="Ch5.DBLien"/>
 
 <%
   // Récupation de la connexion

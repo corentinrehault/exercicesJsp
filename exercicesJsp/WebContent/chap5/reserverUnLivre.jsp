@@ -16,17 +16,17 @@
 <h1>Réserver un livre</h1>
 
 <!--// DBConnexion Bean-->
-<jsp:useBean id="dbcnx" class="Exercices.Ch5.DBConnexion">
+<jsp:useBean id="dbcnx" class="Ch5.DBConnexion">
 <!--// Code d'initialisation //-->
-<jsp:setProperty name= "dbcnx" property="login" value="jspuser"/>
-<jsp:setProperty name= "dbcnx" property="password" value="jspuser"/>
+<jsp:setProperty name= "dbcnx" property="login" value="userjsp"/>
+<jsp:setProperty name= "dbcnx" property="password" value="userjsp"/>
 <jsp:setProperty name= "dbcnx" property="hostname" value="localhost"/>
 <jsp:setProperty name= "dbcnx" property="port" value="3306"/>
 <jsp:setProperty name= "dbcnx" property="nomDeLaBase" value="livrejsp"/>
 </jsp:useBean>
 
 <!--// DBLien Bean -->
-<jsp:useBean id="dblien" class="Exercices.Ch5.DBLien"/>
+<jsp:useBean id="dblien" class="Ch5.DBLien"/>
 
 <%
   // Récupation de la connexion

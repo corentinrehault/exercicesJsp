@@ -11,14 +11,14 @@
 <%@ page import="java.text.DateFormat" %>
 
 <!--// Connexion à la base de donnée -->
-<jsp:useBean id="dbcnx" class="Exercices.Ch5.DBConnexion">
-<jsp:setProperty name="dbcnx" property="login" value="jspuser"/>
-<jsp:setProperty name="dbcnx" property="password" value="jspuser"/>
+<jsp:useBean id="dbcnx" class="Ch5.DBConnexion">
+<jsp:setProperty name="dbcnx" property="login" value="userjsp"/>
+<jsp:setProperty name="dbcnx" property="password" value="userjsp"/>
 <jsp:setProperty name="dbcnx" property="hostname" value="localhost"/>
 <jsp:setProperty name="dbcnx" property="port" value="3306"/>
 <jsp:setProperty name="dbcnx" property="nomDeLaBase" value="livrejsp"/>
 </jsp:useBean>
-<jsp:useBean id="dblien" class="Exercices.Ch5.DBLien"/>
+<jsp:useBean id="dblien" class="Ch5.DBLien"/>
 <%
   Connection cnx = dbcnx.getCnx();
   if (cnx == null) {
@@ -31,7 +31,7 @@
 %>
 
 <%// On instancie le bean de session Lecteur %>
-<jsp:useBean id="lecteur" class="Exercices.Ch6.Lecteur" scope="session"/>
+<jsp:useBean id="lecteur" class="Ch6.Lecteur" scope="session"/>
 <%
   // Variable de test
   int empruntPossible=0;
